@@ -1,8 +1,8 @@
 <footer>
     <div class="d-flex flex-column justify-content-center align-items-center" id="footer1">
-        <h2>! ماذا تنتظر أبدأ الآن</h2>
-        <h2>وغير حياتك بضغطة زر واحدة</h2>
-        <a class="btn d-flex justify-content-center align-items-center mt-3" href="SignIn.html">انشاء حساب</a>
+        <h2 id="h21">! ماذا تنتظر أبدأ الآن</h2>
+        <h2 id="h22">وغير حياتك بضغطة زر واحدة</h2>
+        <a class="btn d-flex justify-content-center align-items-center mt-3" href="<?php echo URLROOT; ?>/SignIn">انشاء حساب</a>
     </div>
     <div class="d-flex flex-wrap flex-row-reverse justify-content-center align-items-center mt-5" id="footer2">
         <div class="d-flex justify-content-center align-items-center">

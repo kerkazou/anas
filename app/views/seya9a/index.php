@@ -93,14 +93,14 @@
                 <img src="<?php echo URLROOT; ?>/image/Online_test-amico.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text h4 text-center">ستجد هنا أيضا اختبارات مطروحة بطريقة ممتعة متعددة ومتجددة</p>
-                    <a href="#" class="btn mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
+                    <a href="<?php echo URLROOT; ?>/Tests" class="btn mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
                 </div>
             </div>
             <div class="card col-lg-3 col-md-5 col-10 p-4 shadow border-0">
                 <img src="<?php echo URLROOT; ?>/image/Taking_notes-amico.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text h4 text-center">سياقة توفر مجموعة  من الدروس المعتمدة  الخاصة بتعليم السياقة</p>
-                    <a href="#" class="btn mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
+                    <a href="<?php echo URLROOT; ?>/Cours" class="btn mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
                 </div>
             </div>
         </div> 

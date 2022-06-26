@@ -13,7 +13,7 @@
                     <div class="card-body text-center">
                         <p class="card-title h2 fw-bold" style="color: var(--main-color);"> العلامات الطرقية</p>
                         <p class="card-text h4">في هذا الدرس سنتعرف على جميع العلامات الطرقية</p>
-                        <a href="<?php echo URLROOT; ?>/Cours?cour1" class="btn d-flex justify-content-center mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
+                        <a href="<?php echo URLROOT; ?>/Cour" class="btn d-flex justify-content-center mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
                     </div>
                 </div>
             <?php } ?>
