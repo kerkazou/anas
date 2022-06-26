@@ -17,4 +17,23 @@ class DashboardUsers extends Controller {
             redirect('');
         }
     }
+
+    public function delet() {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+            $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING); 
+            $data = [
+                'id' => $_GET['id']
+            ];
+            if($this->userModel->delet($data)){
+                redirect('dashboardUsers/index');
+            }else if($user == false){
+                redirect('dashboardUsers/index');
+            }
+        }
+        else{
+            redirect('dashboardUsers/index');
+        }
+    }
+
+    
 }

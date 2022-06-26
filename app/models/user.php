@@ -59,4 +59,15 @@ class User {
             return false;
         }
     }
+
+    public function delet($data){
+        $this->db->query('DELETE FROM `user` WHERE id = :id');
+        $this->db->bind(':id', $data['id']);
+
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
