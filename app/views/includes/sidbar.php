@@ -1,4 +1,4 @@
-<div class="col-md-2 col-sm-3 col-4 shadow" style="background-color: var(--main-color); color: var(--bg-color);">
+<div class="col-md-2 col-sm-3 col-4 shadow vh-100" style="background-color: var(--main-color); color: var(--bg-color);">
     <h1 class="fw-bold text-center my-5" style=""><span style="color: var(--2nd-main-color);">SeY</span>a9a</h1>
     <div class="d-flex flex-column justify-content-center align-items-center gap-5">
         <div class="text-center">
