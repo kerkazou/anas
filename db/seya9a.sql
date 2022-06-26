@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 26 juin 2022 à 20:19
+-- Généré le : dim. 26 juin 2022 à 21:19
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.1
 
@@ -33,6 +33,13 @@ CREATE TABLE `cour` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `cour`
+--
+
+INSERT INTO `cour` (`id`, `name`, `description`, `image`) VALUES
+(1, 'Cour 1', 'Discription de cour 1', 'Taking_notes-amico.png');
 
 -- --------------------------------------------------------
 
@@ -77,7 +84,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `role`) VALUES
 (1, 'test', 'test', 'test@gmail.com', '202cb962ac59075b964b07152d234b70', ''),
 (2, 'test2', 'test2', 'test2@gmail.com', '202cb962ac59075b964b07152d234b70', ''),
-(10, 'zakaria', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '');
+(10, 'Anas', 'Nafea', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin');
 
 --
 -- Index pour les tables déchargées
@@ -109,7 +116,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `cour`
 --
 ALTER TABLE `cour`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `question`
