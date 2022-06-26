@@ -13,7 +13,7 @@
                     <div class="card-body text-center">
                         <p class="card-title h2 fw-bold" style="color: var(--main-color);"> <?php echo $i ?> الاختبار</p>
                         <p class="card-text h4">اختبر معلوماتك من خلال هذا الاختبار </p>
-                        <a href="<?php echo URLROOT; ?>/Cours?cour1" class="btn d-flex justify-content-center mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
+                        <a href="<?php echo URLROOT; ?>/Test" class="btn d-flex justify-content-center mt-3" style="width: 50%; margin-left: 25%;">اكتشف الآن</a>
                     </div>
                 </div>
             <?php } ?>

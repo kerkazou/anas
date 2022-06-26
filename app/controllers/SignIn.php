@@ -27,7 +27,11 @@ class SignIn extends Controller {
                 $login = $this->userModel->signin($data);
                 if($login){
                     $this->createUserSession($login);
-                    redirect('');
+                    if($_SESSION['role'] == 'admin'){
+                        die('hello admin');
+                    }else{
+                        redirect('');
+                    }
                 }else if($login == false){
                     $data['error'] = 'Password Or Email Is Incorrect';
                     $this->view('sign_in/index' , $data);
@@ -37,7 +41,7 @@ class SignIn extends Controller {
                 $this->view('sign_in/index' , $data);
             }
         }else{
-            redirect('');      
+            redirect('');
         }
     }
 
@@ -46,6 +50,7 @@ class SignIn extends Controller {
         $_SESSION['first_name'] = $user->first_name;
         $_SESSION['last_name'] = $user->last_name;
         $_SESSION['email'] = $user->email;
+        $_SESSION['role'] = $user->role;
         $_SESSION['time'] = time();
     }
 

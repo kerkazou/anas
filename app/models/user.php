@@ -8,6 +8,18 @@ class User {
         $this->db = new Database;
     }
 
+    public function getUsers(){
+        $this->db->query('SELECT * FROM `user`');
+        $result = $this->db->resultSet();
+        return $result;
+    }
+
+    public function getNumberUser(){
+        $this->getUsers();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
     public function signup($data){
         $this->db->query('INSERT INTO `user` (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
         $this->db->bind(':first_name', $data['first_name']);
