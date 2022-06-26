@@ -10,9 +10,11 @@
                 <div class="d-flex flex-wrap flex-row-reverse gap-2"><h4 style="color: var(--bg-color);"> هل لديك حساب  بالفعل ؟ </h4><h4><a  style="color: var(--main-color);" class="text-decoration-none" href="<?php echo URLROOT; ?>/SignIn"> تسجيل الدخول </a></h4></div>
                 <button style="width: 95%; height: 65px; border-radius: 10px; background-color: var(--text-color2); border: none; color: var(--main-color);"> <img class="me-2" src="<?php echo URLROOT; ?>/image/Group_187.png">انشاء باستخدام</button>
                 <h5 style="color: var(--bg-color);">او</h5>
-                <p class="text-danger h4"><?php if(isset($data['error'])) echo $data['error']; ?></p>
+                <?php if(isset($data['error'])) echo '
+                    <div class="alert alert-primary col-11 text-danger h4" role="alert">'.$data['error'].'</div>
+                '?>
                 <form class="row d-flex justify-content-center align-items-center gap-4" method="POST" action="<?php echo URLROOT; ?>/SignUp/signup">
-                    <div class="col-11 d-flex justify-content-center gap-3">
+                    <div class="col-11 d-flex flex-row-reverse justify-content-center gap-3">
                         <input class="col-6 pe-3" name="first_name" type="text" placeholder="الاسم الشخصي">
                         <input class="col-6 pe-3" name="last_name" type="text" placeholder="الاسم العائلي">
                     </div>

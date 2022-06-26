@@ -5,4 +5,4 @@
     <div class="text-center"><a class="h2" href="<?php echo URLROOT ;?>/">You are a lost, come back to page Home</a>.</div>
 </body>
 
-<?php require APPROOT . '/views/includes/footer.php'; ?>
+<?php require APPROOT . '/views/includes/footer2.php'; ?>
