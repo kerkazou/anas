@@ -7,7 +7,7 @@ class DashboardUsers extends Controller {
     }
 
     public function index(){
-        if(isset($_SESSION['user_id'])){
+        if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 'admin')){
             $users = $this->userModel->getUsers();
             $data = [
                 'users' => $users

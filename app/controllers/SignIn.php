@@ -28,7 +28,7 @@ class SignIn extends Controller {
                 if($login){
                     $this->createUserSession($login);
                     if($_SESSION['role'] == 'admin'){
-                        die('hello admin');
+                        redirect('Dashboard');
                     }else{
                         redirect('');
                     }

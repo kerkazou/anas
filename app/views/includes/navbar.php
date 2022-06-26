@@ -19,12 +19,18 @@
                         echo '
                             <li class="nav-item"><a class="dropdown-item" href="'.URLROOT.'/SignIn">تسجيل الدخول</a></li>
                         ';
-                        elseif(isset($_SESSION['user_id']))
+                    elseif(isset($_SESSION['user_id']))
                         echo '
                             <li class="nav-item"><a class="dropdown-item" href="'.URLROOT.'/Cours">الدروس</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="'.URLROOT.'/Tests">اختبار</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="'.URLROOT.'/SignIn/logout">تسجيل الخروج</a></li>
                         ';
+                    if(isset($_SESSION['user_id'])){
+                        if($_SESSION['role'] == 'admin')
+                            echo '
+                                <li class="nav-item"><a class="dropdown-item" href="'.URLROOT.'/Dashboard">لوحة التحكم</a></li>
+                            ';
+                    }
                 ?>
             </ul>
         </div>
