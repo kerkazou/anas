@@ -17,7 +17,14 @@
                     <div class="h3 fw-bold" style="color: var(--main-color);">ابدأ من هنا</div>
                     <img src="<?php echo URLROOT; ?>/image/start.png">
                 </div>
-                <a class="btn d-flex align-items-center justify-content-center" href="<?php echo URLROOT; ?>/SignUp" class="btn">انشاء حساب</a>
+                <?php
+                    if(!isset($_SESSION['user_id'])){
+                        echo'<a class="btn d-flex align-items-center justify-content-center" href="'.URLROOT.'/SignUp" class="btn">انشاء حساب</a>';
+                    }
+                    elseif(isset($_SESSION['user_id'])){
+                        echo'<a class="btn d-flex align-items-center justify-content-center" href="'.URLROOT.'/Cours" class="btn">الدروس</a>';
+                    }
+                ?>
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center gap-5 mt-5" id="statistique">
