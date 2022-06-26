@@ -70,4 +70,19 @@ class User {
             return false;
         }
     }
+
+    public function edit($data) {
+        $this->db->query('UPDATE `user` SET `first_name`=:first_name , `last_name`=:last_name , `email`=:email WHERE `id`=:id');
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':first_name', $data['first_name']);
+        $this->db->bind(':last_name', $data['last_name']);
+        $this->db->bind(':email', $data['email']);
+
+        $this->db->execute();
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
