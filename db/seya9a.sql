@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 26 juin 2022 à 16:00
+-- Généré le : dim. 26 juin 2022 à 20:19
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.1
 
@@ -24,6 +24,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `cour`
+--
+
+CREATE TABLE `cour` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `question`
+--
+
+CREATE TABLE `question` (
+  `id` int(11) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `proposition` varchar(255) NOT NULL,
+  `repondre` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `question`
+--
+
+INSERT INTO `question` (`id`, `question`, `proposition`, `repondre`, `image`) VALUES
+(1, '?????? 1', 'reponse1,reponse2', 'reponse3', 'Group_510.png');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user`
 --
 
@@ -32,23 +66,34 @@ CREATE TABLE `user` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'test', 'test', 'test@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(2, 'test2', 'test2', 'test2@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(3, 'zakaria', 'kerkazou', 'zakaria@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(4, 'ZAKARIA', 'KERKAZOU', 'kerkazou.zakaria@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(5, 'zakaria', 'kerkazou', 'hdklq@gmail.Com', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `role`) VALUES
+(1, 'test', 'test', 'test@gmail.com', '202cb962ac59075b964b07152d234b70', ''),
+(2, 'test2', 'test2', 'test2@gmail.com', '202cb962ac59075b964b07152d234b70', ''),
+(10, 'zakaria', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '');
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `cour`
+--
+ALTER TABLE `cour`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `user`
@@ -61,10 +106,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT pour la table `cour`
+--
+ALTER TABLE `cour`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `question`
+--
+ALTER TABLE `question`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
